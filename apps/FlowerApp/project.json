@@ -28,8 +28,6 @@
         ],
         "styles": [
           "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
-          "node_modules/primeflex/primeflex.css",
-          "node_modules/primeflex/themes/primeone-light.css",
           "apps/FlowerApp/src/styles.scss"
         ],
         "scripts": [],
