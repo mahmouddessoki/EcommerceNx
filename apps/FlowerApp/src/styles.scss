@@ -1,9 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 @import "primeicons/primeicons.css";
+@theme {
+  --color-main:#F82BA9;
+  --color-secondary:#160E4B;
+  --font-main:"Inter",sans-serif;
+}
+@layer gift {
+  .gift-media {
+      @apply col-span-12 max-md:text-center text-right md:col-span-6 xl:col-span-4;
+    }
 
+    .gift-bg {
+      @apply bg-no-repeat bg-size-[100%] group-first:bg-[url(/images/gifts/gift1.png)] group-nth-2:bg-[url(/images/gifts/gift2.png)] group-last:bg-[url(/images/gifts/gift3.png)] bg-center
+    }
 
-@component {
-  .f-responsive {
-    @apply col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3;
+    .gift-name {
+      @apply font-bold min-md:pl-10 text-[20px] text-secondary pb-[15px] my-[10px]
+    }
+
+    .gift-btn {
+      @apply bg-main text-[14px] rounded-[20px] text-white p-[8px]
+    }
+}
+
+@layer features {
+  .feature-flex {
+    @apply flex flex-col lg:flex-row lg:items-start items-center gap-3
+  }
+  .feature-icon {
+   @apply  w-[65px] h-[65px] flex justify-center items-center bg-main rounded-full
+  }
+  .feature-name {
+    @apply mb-[5px] font-bold text-[20px] lg:text-left text-center
   }
 }

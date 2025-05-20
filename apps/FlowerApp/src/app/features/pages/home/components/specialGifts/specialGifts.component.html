@@ -1,1 +1,15 @@
-<p>specialGifts works!</p>
+<section id="gifts" class="font-main my-[80px]" >
+  <div class="gifts-banner"></div>
+
+  <div class="gifts-list">
+    <div class="grid grid-cols-12 gap-8">
+      @for (gift of gifts; track $index) {
+
+        <div class="gift-media group">
+        <app-gift-card [gift]="gift" />
+        </div>
+      }
+
+    </div>
+  </div>
+</section>
