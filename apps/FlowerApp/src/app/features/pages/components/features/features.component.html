@@ -1,10 +1,9 @@
 
 
-<section id="features" class="mb-[80px] bg-[#FEEDF7] sm:px-[40px] py-[40px]   rounded-[20px]">
+<section  id="features" class="mb-[80px] bg-[#FEEDF7] sm:px-[40px] py-[40px]   rounded-[20px]">
   <div class="grid grid-cols-12 gap-6 justify-items-center">
     @for (feature of features; track $index) {
     <div class="col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3">
-
      <app-feature-card [feature]="feature" />
      </div>
     }
