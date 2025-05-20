@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-interface feature {
+import { FeatureCardComponent } from "../feature-card/feature-card.component";
+export interface feature {
   icon : string ,
   name : string ,
   label : string
 }
 @Component({
   selector: 'app-features',
-  imports: [CommonModule],
+  imports: [CommonModule, FeatureCardComponent],
   templateUrl: './features.component.html',
   styleUrl: './features.component.scss',
 })

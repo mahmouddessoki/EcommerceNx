@@ -3,20 +3,10 @@
 <section id="features" class="my-[80px] bg-[#FEEDF7] sm:px-[40px] py-[40px]   rounded-[20px]">
   <div class="grid grid-cols-12 gap-6 justify-items-center">
     @for (feature of features; track $index) {
-      <div class="col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3">
-        <div class="feature flex flex-col lg:flex-row lg:items-start items-center  gap-3">
-          <div class="icon w-[65px] h-[65px] flex justify-center items-center bg-[#F82BA9] rounded-full">
-            <i class="{{feature.icon}} pi text-[white] "></i>
-          </div>
-          <div class="feature-info capitalize">
-            <h3 class="mb-[5px]  font-bold text-[20px] lg:text-left text-center ">{{feature.name}}</h3>
-            <p class="text-[#757F95]">{{feature.label}}</p>
-          </div>
-        </div>
-      </div>
+    <div class="col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3">
+
+     <app-feature-card [feature]="feature" />
+     </div>
     }
   </div>
-
-
-
 </section>
