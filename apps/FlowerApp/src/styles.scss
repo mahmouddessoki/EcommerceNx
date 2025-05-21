@@ -20,10 +20,35 @@
     }
 
     .gift-btn {
-      @apply bg-main text-[14px] rounded-[20px] text-white p-[8px]
+      @apply bg-main text-[14px]  text-white
     }
 }
-
+@layer gifts-banner {
+  .gift-img {
+    @apply rounded-[14px] w-full h-full;
+  }
+  .gift-overlay {
+    @apply absolute w-full flex top-0 bottom-0
+  }
+  .banner-span {
+    @apply text-main uppercase text-[14px] lg:text-[18px] tracking-[4.66px] font-bold
+  }
+ .slider-span {
+  @apply text-main uppercase lg:text-[20px] font-bold tracking-[4.66px]
+ }
+ .title {
+  @apply text-[18px] lg:text-[24px] text-secondary font-bold my-[12px]
+ }
+ .slider-title {
+  @apply text-[20px] lg:text-[45px] text-secondary font-bold md:mt-[24px] md:mb-[16px] mt-[16px] mb-[8px];
+ }
+ .slider-desc {
+  @apply md:text-secondary text-[#757F95] max-sm:text-[12px] mb-[12px] md:mb-[24px]
+ }
+ .slider-btn {
+  @apply flex items-center gap-2 md:py-[10px] p-[8px] md:px-[19px] rounded-[4.07px] md:rounded-[14px]
+ }
+}
 @layer features {
   .feature-flex {
     @apply flex flex-col lg:flex-row lg:items-start items-center gap-3
@@ -34,4 +59,51 @@
   .feature-name {
     @apply mb-[5px] font-bold text-[20px] lg:text-left text-center
   }
+}
+
+
+ul.p-carousel-indicator-list {
+  position: absolute;
+  bottom: 20px;
+  left: 40%;
+}
+.p-carousel-content-container {
+  position: relative !important;
+}
+.p-carousel-prev-button,
+.p-carousel-next-button {
+  position: absolute;
+  bottom: 2.5rem;
+  z-index: 9;
+}
+.p-carousel-next-button {
+  right: 40px;
+}
+.p-carousel-prev-button {
+  right: 80px;
+  margin-right: 10px;
+}
+
+.p-button-text {
+  color: black !important;
+  background: white !important;
+}
+
+
+.p-carousel-indicator-button {
+  width: 7px !important;
+  height: 7px !important;
+  border-radius: 50%;
+  background-color: #F82BA9 !important;
+}
+.p-carousel-indicator-active .p-carousel-indicator-button {
+  width: 19px !important;
+}
+
+
+@media all and (max-width:768px) {
+  html {
+    font-size: 14px;
+  }
+
 }
