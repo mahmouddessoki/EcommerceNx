@@ -1,1 +1,9 @@
 @import "tailwindcss";
+@import "primeicons/primeicons.css";
+
+
+@component {
+  .f-responsive {
+    @apply col-span-12 sm:col-span-6 lg:col-span-4 xl:col-span-3;
+  }
+}
