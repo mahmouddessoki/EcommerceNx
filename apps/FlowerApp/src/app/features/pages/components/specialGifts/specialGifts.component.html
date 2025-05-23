@@ -1,0 +1,62 @@
+<section id="gifts" class="font-main my-[80px]" >
+  <div class="gifts-banner  mb-[24px]">
+    <div class="grid grid-cols-12 gap-5">
+      <div class="col-span-12 md:col-span-3">
+        <div class="banner-item h-full relative">
+          <img src="/images/gifts/gift5.jpg" class="gift-img" alt="banner img">
+          <div class="item-center md:items-end gift-overlay">
+
+            <div class="caption ml-[16px] mb-[24px] ">
+              <span class="banner-span">Start $10.99</span>
+              <h2 class="title">Special Gifts Box <br> For Your Love</h2>
+              <button class="gift-btn flex p-[8px] items-center gap-2 rounded-[14px]">
+                shop now
+                <i class="pi pi-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-12 md:col-span-9">
+        <div class="card">
+          <p-carousel [value]="bannerItems" [numVisible]="1" [numScroll]="1"
+            >
+            <ng-template let-item #item>
+              <div class="relative">
+
+                <img src="{{item.img}}" class="gift-img" alt="">
+                <div class="gift-overlay items-center">
+
+                  <div class="caption sm:w-1/2 md:ml-[60px] ml-[16px] ">
+                    <span class="slider-span">{{item.title}}</span>
+                    <h2 class="slider-title">
+                      Choose Perfect <br> <span class="text-main">Gifts</span> From Us
+                    </h2>
+                    <p class="slider-desc">
+                      {{item.desc}}
+                    </p>
+                    <app-button>
+                      {{item.btnLabel}}
+                      <i class="pi pi-arrow-right"></i>
+                    </app-button>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </p-carousel></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gifts-list">
+    <div class="grid grid-cols-12 gap-8">
+      @for (gift of gifts; track $index) {
+
+        <div class="gift-media group">
+        <app-gift-card [gift]="gift" />
+        </div>
+      }
+
+    </div>
+  </div>
+</section>
