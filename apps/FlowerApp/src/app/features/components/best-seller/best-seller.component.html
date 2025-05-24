@@ -1,0 +1,58 @@
+<section class="best-seller mb-[5rem]">
+  <div class="flex flex-wrap lg:flex-nowrap gap-4 !min-h-[18.875rem]">
+    <!-- ========== Best Seller ========== -->
+    <div class="w-full lg:w-1/4 px-4 py-0 flex flex-col justify-between">
+      <h6 class="text-main text-[1.0625rem] mb-4">Premium Gifts</h6>
+      <h2 class="text-[1.875rem] font-bold mb-2 leading-tight">
+        Best <span class="text-main">Seller <br />gifts</span> and products
+      </h2>
+      <p class="text-[#757F95] mb-4">
+        Recusandae tempora aut laborum molestias veniam. A commodi
+        sequiaccusantium ullam cupiditate. Neque quidem qui et autem dolor
+        dictanecessitatibus ut ad.
+      </p>
+      <button class="text-[1rem] font-medium rounded-[0.625rem] bg-main text-white px-5 py-3 w-fit">
+        Explore More <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+
+    <!-- ========== Carousel ========== -->
+    <div class="w-full lg:w-3/4 relative flex-grow !min-h-[18.875rem]">
+      <owl-carousel-o [options]="customOptionsBest">
+        @for (item of bestSellerItems; track $index) {
+        <ng-template carouselSlide [id]="item._id">
+          <div class="bg-white mx-2 h-full">
+            <div class="relative">
+              <!-- <span class="absolute text-xs px-[0.625rem] py-[0.0625rem] rounded-full text-white right-[0.5rem] top-[0.5rem]"
+                  [style.backgroundColor]="typeStyles[slide.type]"> {{ slide.type }} </span> -->
+              <img [src]="item.imgCover "
+                class="!h-[17.625rem] object-fit-cover carousal-img rounded-xl mb-3 mx-auto"
+                [alt]="item.title"/>
+            </div>
+            <div class="flex justify-between items-center mx-4 mt-2">
+              <div>
+                <h3 class="text-base font-bold">{{ item.title | termText : 2 }}</h3>
+                <div class="flex text-yellow-500 text-sm my-2">
+                  @for (num of [1,2,3,4,5].slice(0, item.rateAvg); track $index)
+                  {
+                  <i class="fas fa-star rating-color"></i>
+                  } @if (item.rateAvg % 1 !== 0) {
+                  <i class="fa-solid fa-star-half-stroke rating-color"></i>
+                  }
+                </div>
+                <span class="text-[#F05454] text-sm my-1">${{ item.priceAfterDiscount }}</span>
+                <span class="line-through text-gray-400 text-sm mt-1 ms-2">${{ item.price }}</span>
+              </div>
+              <div>
+                <span class="bg-[#8C52FF] p-[0.75rem] rounded-full w-[2.625rem]"
+                  ><i class="fa-solid fa-briefcase text-white"></i
+                ></span>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+        }
+      </owl-carousel-o>
+    </div>
+  </div>
+</section>

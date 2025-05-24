@@ -1,1 +1,17 @@
 @import "tailwindcss";
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+// Global Variable
+$main-color: #F82BA9;
+$second-color: #FEEDF7;
+
+.text-main {
+    color: $main-color;
+}
+.bg-main {
+    background-color: $main-color;
+}
+.bg-second {
+    background-color: $second-color;
+}

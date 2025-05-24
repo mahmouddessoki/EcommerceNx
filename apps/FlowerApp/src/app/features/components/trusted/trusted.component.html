@@ -1,0 +1,19 @@
+<section class="trusted mb-[5rem]">
+  <div class="w-full bg-second text-[1.875rem] text-center rounded-lg">
+    <h1 class="font-bold py-[1.875rem] text-[1.5625rem] sm:text-[1.875rem]">
+      <span class="with-underline relative">Trusted by</span> over
+      <span class="text-main"> 4.5k+ </span> companies
+    </h1>
+    <owl-carousel-o [options]="customOptionsBrands">
+      @for (brand of Brands; track $index) {
+        <ng-template carouselSlide>
+          <img
+            [src]="brand.image"
+            class="w-[50%] h-auto bg-second mb-[0.75rem] mx-auto"
+            alt="Brands"
+          />
+        </ng-template>
+      }
+    </owl-carousel-o>
+  </div>
+</section>

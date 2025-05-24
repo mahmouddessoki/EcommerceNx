@@ -1,0 +1,13 @@
+.with-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -0.25rem;
+  left: 0;
+  width: 100%;
+  height: 0.125rem;
+  background-color: #F82BA9;
+}
+
+.trusted ::ng-deep .owl-nav {
+  display: none !important;
+}
