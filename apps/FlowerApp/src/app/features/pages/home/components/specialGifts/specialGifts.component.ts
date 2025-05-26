@@ -4,7 +4,8 @@ import { GiftCardComponent } from "../gift-card/gift-card.component";
 import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
-import { ButtonComponent } from "../../../../shared/components/ui/button/button.component";
+import { ButtonComponent } from './../../../../../shared/components/ui/button/button.component';
+
 export interface gift {
   title:string,
   name : string ,
@@ -19,7 +20,8 @@ export interface carouselItem {
 }
 @Component({
   selector: 'app-special-gifts',
-  imports: [CommonModule, GiftCardComponent, CarouselModule, ButtonModule, TagModule, ButtonComponent],
+  imports: [CommonModule, GiftCardComponent,
+   CarouselModule, ButtonModule, TagModule, ButtonComponent],
   templateUrl: './specialGifts.component.html',
   styleUrl: './specialGifts.component.scss',
 })

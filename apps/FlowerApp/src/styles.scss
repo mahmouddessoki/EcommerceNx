@@ -22,13 +22,16 @@
     .gift-btn {
       @apply bg-main text-[14px]  text-white
     }
+    .gift-info {
+      @apply flex md:items-end items-center flex-col justify-end capitalize
+    }
 }
 @layer gifts-banner {
   .gift-img {
     @apply rounded-[14px] w-full h-full;
   }
   .gift-overlay {
-    @apply absolute w-full flex top-0 bottom-0
+    @apply absolute w-full flex  bottom-0 top-0
   }
   .banner-span {
     @apply text-main uppercase text-[14px] lg:text-[18px] tracking-[4.66px] font-bold
@@ -105,5 +108,8 @@ ul.p-carousel-indicator-list {
   html {
     font-size: 14px;
   }
+    .p-carousel-indicator-button {
+      display: none !important;
+    }
 
 }

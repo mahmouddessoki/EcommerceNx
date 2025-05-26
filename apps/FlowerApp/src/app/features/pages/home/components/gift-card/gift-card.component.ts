@@ -1,7 +1,7 @@
 import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { gift } from '../specialGifts/specialGifts.component';
-import { ButtonComponent } from "../../../../shared/components/ui/button/button.component";
+import { ButtonComponent } from './../../../../../shared/components/ui/button/button.component';
 
 @Component({
   selector: 'app-gift-card',
