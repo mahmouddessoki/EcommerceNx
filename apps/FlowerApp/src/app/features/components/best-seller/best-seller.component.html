@@ -23,8 +23,6 @@
         <ng-template carouselSlide [id]="item._id">
           <div class="bg-white mx-2 h-full">
             <div class="relative">
-              <!-- <span class="absolute text-xs px-[0.625rem] py-[0.0625rem] rounded-full text-white right-[0.5rem] top-[0.5rem]"
-                  [style.backgroundColor]="typeStyles[slide.type]"> {{ slide.type }} </span> -->
               <img [src]="item.imgCover "
                 class="!h-[17.625rem] object-fit-cover carousal-img rounded-xl mb-3 mx-auto"
                 [alt]="item.title"/>
@@ -32,12 +30,17 @@
             <div class="flex justify-between items-center mx-4 mt-2">
               <div>
                 <h3 class="text-base font-bold">{{ item.title | termText : 2 }}</h3>
-                <div class="flex text-yellow-500 text-sm my-2">
-                  @for (num of [1,2,3,4,5].slice(0, item.rateAvg); track $index)
-                  {
-                  <i class="fas fa-star rating-color"></i>
-                  } @if (item.rateAvg % 1 !== 0) {
-                  <i class="fa-solid fa-star-half-stroke rating-color"></i>
+                <div class="flex text-sm my-2">
+                  @for (i of [1, 2, 3, 4, 5]; track i) {
+                    @if (i <= item.rateAvg) {
+                      <i class="fas fa-star text-yellow-500"></i>
+                    }
+                    @else if (i > item.rateAvg && i - 1 < item.rateAvg) {
+                      <i class="fas fa-star-half-alt text-yellow-500"></i>
+                    }
+                    @else {
+                      <i class="far fa-star text-gray-300"></i>
+                    }
                   }
                 </div>
                 <span class="text-[#F05454] text-sm my-1">${{ item.priceAfterDiscount }}</span>
